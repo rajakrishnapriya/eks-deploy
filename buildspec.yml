@@ -1,0 +1,8 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - aws eks update-kubeconfig --region us-west-2 --name priya-cluster
+      - kubectl apply -f deployment.yaml
+      - kubectl apply -f service.yaml
